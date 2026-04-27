@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Pets Become Social Media Influencers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay" id="nav-overlay">
+            <button class="nav-close" id="nav-close">
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#who-can-be">Pets as Salespeople</a></li>
+                <li><a href="#cost-of-clicks">Harming Pets for Clicks</a></li>
+                <li><a href="#personas">Personas and Beauty Filters for Pets</a></li>
+                <li><a href="#preferences">Reshaping Pet Ownership</a></li>
+                <li><a href="#pet-food-sales">Online Pet Food Sales</a></li>
+                <li><a href="#original-intention">Returning to Original Intention of Cloud Pet Parenting</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-scrolly">
+        <div class="hero-sticky">
+            <div class="cover-layers">
+                <img src="cover/cover1.png" id="hero-img-1" class="hero-bg active" alt="Cover 1">
+                <img src="cover/cover2.png" id="hero-img-2" class="hero-bg" alt="Cover 2">
+                <img src="cover/cover3.png" id="hero-img-3" class="hero-bg" alt="Cover 3">
+            </div>
+            
+            <div id="floating-window-1" class="hero-floating-box">
+                <p>Watching cute pet videos on social media has become a way for many people to relax.</p>
+            </div>
+            <div id="floating-window-2" class="hero-floating-box">
+                <p>However, when sharing pet-related content turns into a business, some people try to profit from their pets and even go so far as to harm them in pursuit of traffic. Public attitudes toward pet ownership are also being reshaped.</p>
+            </div>
+        </div>
+
+        <div class="hero-step" id="step-1"></div>
+        <div class="hero-step" id="step-2"></div>
+        <div class="hero-step" id="step-3"></div>
+        <div class="hero-step" id="step-4"></div> 
+    </section>
+
+    <header class="main-headline-section">
+        <h1 id="hero-headline">When Pets Become Social Media Influencers</h1>
+        <p class="byline">By He Jinyi</p>
+    </header>
+
+    <main class="content-body">
+        <section id="intro" class="chapter">
+            <div class="intro-wrap-vertical">
+                <div class="intro-video-vertical">
+                    <video id="intro-video" src="media/QQ_Beginning.mp4" controls muted loop playsinline></video>
+                </div>
+                <div class="intro-text">
+                    <p>After finishing designs on his computer, Xiao Yang rummages through his drawers for the right materials: colored paper, fabric, cardboard, clay, and more.</p>
+                    
+                    <p>Using the measurements of his cat, QQ, he carefully cuts out tiny hats, clothes, and miniature weapons. Once QQ is dressed up, he transforms into a dinosaur, a fisherman, a video game character, or a movie star.</p>
+                    
+                    <p>Xiao then guides QQ in front of a green screen, waits for him to sit still, and films the scene on his phone. With trending music as the soundtrack, he completes a funny and creative short video for social media.</p>
+                </div>
+            </div>
+            
+            <p>This is Xiao’s current full-time job: running a pet influencer account and posting videos every day.</p>
+            
+            <p>Six months after adopting QQ, he decided to launch an account featuring QQ. In half a year, he gained about 300,000 followers.</p>
+
+            <p>“QQ now is not just my family, but also my colleague," he said.</p>
+
+            <div class="multimedia">
+                <img src="media/QQ xiaohongshu.png" alt="QQ Xiaohongshu">
+                <p class="caption">QQ has played roles such as Mona Lisa, angel, warrior, soldier, peacock, emperor, and others. Photo: Xiaohongshu</p>
+            </div>
+
+            <p>There is a growing wave of pet influencers like QQ across social media, with pet-related content surging alongside them. </p>
+            
+            <p>From 2019 to 2025, the number of top pet influencers on Douyin with over five million followers rose from four to 75. On Xiaohongshu, the number of pet content creators with more than one million followers grew from one to 68.</p>
+
+            <div class="data-component">
+                <h3 style="text-align: center; font-family: var(--font-sans);">Number of top Pet Influencers On Douyin and Xiaohongshu</h3>
+                <div class="platform-toggle">
+                    <button id="toggle-douyin" class="tgl-btn active">Douyin</button>
+                    <button id="toggle-xhs" class="tgl-btn">Xiaohongshu</button>
+                </div>
+                
+                <div class="chart-layout">
+                    <div class="y-axis">
+                        <div class="y-label" id="label-t1">&gt; 10M Followers</div>
+                        <div class="y-label" id="label-t2">5M-10M Followers</div>
+                    </div>
+                    <div class="chart-content" id="chart-content"></div>
+                </div>
+                
+                <div class="x-axis" id="x-axis"></div>
+                <div class="data-source">Data Source: ChongYeJia</div>
+            </div>
+
+            <p>Apart from cosplay, pet influencer videos come in many other forms, such as vlogs, travel videos, pet baths, and pet mukbangs, among others.</p>
+            
+            <p>On Douyin and Kuaishou, recommended videos often feature cats and dogs. Some dogs help their owners cook, fetch deliveries, or even prepare brown sugar water for period pain. Border Collies run training classes for other dogs, showcasing IQs that seem to surpass those of high school students. Others stage dramatic palace intrigues, jealousy, or even love triangles.</p>
+
+            <div class="interactive-series-v2">
+                <div class="horizontal-gallery" id="video-series">
+                    <div class="video-card"><video src="media/mukbang@豆芽吃不饱.mp4" muted loop playsinline preload="metadata"></video><p>pet mukbang</p></div>
+                    <div class="video-card"><video src="media/petspa@是曼玉不是鳗鱼.mp4" muted loop playsinline preload="metadata"></video><p>pet spa</p></div>
+                    <div class="video-card"><video src="media/petvlog@lulu与芝芝.mp4" muted loop playsinline preload="metadata"></video><p>pet vlog</p></div>
+                    <div class="video-card"><video src="media/petfunny@唠唠叨叨.mp4" muted loop playsinline preload="metadata"></video><p>funny pet</p></div>
+                    <div class="video-card"><video src="media/pettravel@土豆阿座.mp4" muted loop playsinline preload="metadata"></video><p>pet travel</p></div>
+                    <div class="video-card"><video src="media/petdance@橘务院二把手.mp4" muted loop playsinline preload="metadata"></video><p>pet dance</p></div>
+                    <div class="video-card"><video src="media/petdrama@Caesarcat.mp4" muted loop playsinline preload="metadata"></video><p>pet drama</p></div>
+                    
+                    
+                </div>
+                <div class="scroll-indicator" id="video-series-dots" aria-label="Video series position indicator">
+                    <span class="dot active" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                </div>
+            </div>
+
+
+                        
+            <p>The stars of pet accounts are also diversifying. While cats and dogs still dominate, lizards, hamsters, snakes, and other exotic pets are gaining popularity. As of April 2026, posts under exotic pet topics have been viewed over one billion times on Xiaohongshu, while related Douyin videos have been played 11.16 billion times.</p>
+            
+            <div class="multimedia-double">
+                <img src="media/exo1.jpg" alt="Exotic Pet 1">
+                <img src="media/exo2.jpg" alt="Exotic Pet 2">
+                <p class="caption">On Douyin and Xiaohongshu, content under the exotic pets tag not only has high viewership but is also diverse in type, including introductions to exotic pets, breed recommendations, and feeding advice. Photo: Douyin and Xiaohongshu</p>
+            </div>
+
+            <p> </p>
+            <p> </p>
+
+            <div class="wrap-container clearfix">
+                <div class="float-right-wrapper">
+                    <img src="media/dakaimen.png" alt="Da Kai Men">
+                    <p class="caption">Da Kai Men learns how to distinguish between carrot and tissue. Photo: Xiaohognshu</p>
+                </div>   
+                
+                <p>Many pet influencers have won the hearts of netizens. In December 2025, the pet influencer “Super Invincible Da Kai Men” went viral with a video of its Calico cat, Da Kai Men, and the phrase “carrot and tissue.” </p>
+                
+                <p>While teaching pets to recognize objects isn’t new, Da Kai Men stood out for its dramatic “reading the room” skills, guessing carrot and tissue by observing its owner’s reactions rather than understanding the cues. </p>
+                    
+                <p>“Super Invincible Da Kai Men“ gained 580,000 followers in just one month, with over 260,000 new followers on Dec. 21, 2025, alone.</p>
+
+
+            </div>
+            
+            <p>“When I feel exhausted from studying, I will watch a video of a dog taking a bath or playing outside. This makes me feel like I’m melting like butter,” Wang Xinran, a 24-year-old senior university student from Guangzhou and a devoted viewer of pet videos, said.</p>
+            
+            <p>Cloud pet parenting, a term used to describe emotionally engaging with pets through online content such as videos, photos, and livestreams, has become a way for many people to find comfort and relaxation.</p>
+            
+            <p>According to Xiaohongshu, as of June 2025, the pet-interested audience on Xiaohongshu surpassed 170 million, doubling that of March 2024.</p>
+            
+            <p>Pets in front of the camera have sparked a new trend online. However, as cute, healing, and funny pet content becomes carefully staged, influenced by algorithms, and turns into a business, some concerns are emerging.</p>
+
+        </section>
+
+        <section id="who-can-be" class="chapter">
+            <h2>Pets as Salespeople</h2>
+            
+            <p>Zhang Shoukun, 34, is the general manager of Chongqing Xuchu Technology Co., an e-commerce company. He has worked in the pet industry for 12 years.</p>
+            
+            <p>He said that the main source of income for pet influencers is advertising, in which brands pay influencers to promote products, such as pet food, pet toys, digital products, or home appliances, via photos or videos.</p>
+
+            <div class="header-section">
+                <h3 style="text-align: center;">How Do Pet Influencers Make Money?</h3>
+                <p style="text-align: center;">Click to see more</p>
+            </div>
+
+            <div class="grid-container" id="grid"></div>
+
+            <div class="overlay" id="overlay" onclick="closeExpanded()">
+                <div class="expanded-content" onclick="event.stopPropagation()">
+                    <button class="close-btn" onclick="closeExpanded()">X</button>
+                    <h2 id="exp-title" style="color: #864218; margin-bottom: 10px; font-size: 28px; border-bottom: 2px solid #864218;">Title</h2>
+                    
+                    <div class="detail-text" id="exp-details" style = "font-size: 16px;"></div>
+                    
+                    <div class="photo-gallery">
+                        <div class="photo-container">
+                            <div class="photo-placeholder">
+                                <img id="img-1" src="" alt="Photo 1" style="display:none;" onload="this.style.display='block'">
+                            </div>
+                            <div class="photo-caption" id="cap-1">Caption 1</div>
+                        </div>
+                        <div class="photo-container">
+                            <div class="photo-placeholder">
+                                <img id="img-2" src="" alt="Photo 2" style="display:none;" onload="this.style.display='block'">
+                            </div>
+                            <div class="photo-caption" id="cap-2">Caption 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <p>Zhang said that for top pet influencers with about ten million followers, the base rate for a single advertisement typically starts at several hundred thousand yuan. During peak seasons, they can secure six to seven advertisement placements per month, while in off seasons, the number drops to two or three.</p>
+            
+            <p>Though not a top influencer, Xiao’s Douyin account, with 300,000 followers, charges around 8,000 yuan (HK$9,198) per video ad, with rates varying by product. Cat food ads earn 4,000–5,000 yuan (HK$4,599–HK$5,749); cat litter, about 1,000 yuan (HK$1,146); high-tech products like 3D printers, over 10,000 yuan (HK$11,498); and mobile games, several thousand yuan per video.</p>
+            
+            <p>As for livestreaming e-commerce, many top pet influencers have demonstrated strong sales capabilities.</p>
+
+            <div class="chart-container" style="margin: 80px auto;">
+                <canvas id="livestreamChart"></canvas>
+                <div class="data-source">Data Source: Feigua</div>
+            </div>
+
+            <p>“I think newcomers in the pet influencer space still have a chance. This industry is booming,” Zhang said.</p>
+
+            <p>The commercial potential of pet influencers and the growing industry is attracting more people to become pet influencers. They seek suitable pets and hope to profit from them.</p>
+
+            <p>Zhang said that having unique features is one of the important factors determining whether a pet can become an influencer with a large following.</p>
+
+            <p>“Everyone thinks their own pet is the cutest, but what matters is whether the pet can win the hearts of online viewers. For example, the pet is especially good-looking, has a heart on its forehead, or is a popular breed. Even if you don’t have any editing skills, some simple photos or videos of a pet with special features can still get traffic,” he said.</p>
+            
+            <div class="multimedia">
+                <div class="image-grid-large">
+                    <img src="media/ugly1.png" alt="Unique Pet 1">
+                    <img src="media/ugly2.png" alt="Unique Pet 2">
+                    <img src="media/ugly3.png" alt="Unique Pet 3">
+                    <img src="media/ugly4.png" alt="Unique Pet 4">
+                </div>
+                <p class="caption">Some cats become popular online for their unique appearances, such as mustache-like markings around their mouths or heart-shaped patterns on their bodies. Photo: Xiaoghongshu</p>
+            </div>
+
+            <p>Currently, social media content featuring Dachshunds is very appealing because of their short legs and long bodies, along with their popularity among Chinese celebrities.</p>
+
+            <div class="yatou-scrolly-container">
+                <div class="yatou-image-layer">
+                    <div class="image-wrapper">
+                        <img src="media/yatou profile.png" alt="Yatou">
+                        <p class="caption">Yatou's Xiaohongshu Profile<br>Photo: Xiaohongshu</p>
+                    </div>
+                </div> 
+
+                <div class="yatou-text-layer">
+                    <div class="floating-box">
+                        <p>Chloé Chen, 26, a financial analyst in Beijing, manages social media accounts about her Dachshund.</p>
+                    </div>
+                    <div class="floating-box">
+                        <p>She decided last May to pivot from being a career advice blogger to a pet influencer. At first, she posted daily life videos of her Schnauzer, but her follower count did not grow much.</p>
+                    </div>
+                    <div class="floating-box">
+                        <p>While operating her pet account, she noticed that Dachshund was a popular breed online. Therefore, she spent 9,000 yuan (HK$10,348.20) buying a Dachshund, naming him Yatou, and started new Xiaohongshu and Douyin accounts for him.</p>
+                    </div>
+                    <div class="floating-box">
+                        <p>She shares stories about Yatou’s life, and now, her account has 57,000 followers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>Chen is not the only one seeking pets with influencer potential.</p>
+            
+            <p>Xiang Xueying, 30, owns a French Bulldog and a Shiba Inu, and is also involved in personal pet rescue. She once saw a post on Xiaohongshu that read, “I want to buy a cat to start a social media channel, with a budget under 10,000 yuan (HK$11,498). Can I get an internet-famous cat?” In the comments section, many users suggested looking for a funny-looking or ugly cat, arguing that the more unusual the appearance, the easier it would be to become popular.</p>
+            
+            <div class="multimedia-request">
+                <img src="media/request.png" alt="Request post">
+                <p class="caption">The Xiaohongshu post reads, “I want to buy a cat to start a social media channel, with a budget under 10,000 yuan (HK$11,498). Can I get an internet-famous cat?” Photo: Xiaohongshu</p>
+            </div>
+
+            <p>“I was really upset and angry when I saw that post,” Xiang said. “I also checked out the user’s profile and saw that he already owned a cat, so he was not new to pet ownership. Regardless of whether he was buying another cat for social media content and trying to profit from the pet, or simply making the post for attention, it’s irresponsible. A cat is not a money-making tool. It’s a living being.” </p>
+
+            <p>She added that in the past, people usually raised pets because they found them cute or wanted companionship, but now, the value of pets is increasingly defined by online popularity and engagement.</p>
+            
+        </section>
+
+        <section id="cost-of-clicks" class="chapter">
+            <h2>Harming Pets for Clicks</h2>
+            
+            <p>Before settling on cosplay, Xiao experimented with pet vlogs and other types of videos but struggled to attract attention.</p>
+
+            <p>It wasn’t until a video of QQ dressed as a fisherman unexpectedly went viral and received over 2 million likes that Xiao finally confirmed the content direction for his account.</p>
+
+
+            <section class="qq-scrolly-section">
+                <div class="scrolly-wrapper">
+                    
+                    <div class="scrolly-text-column">
+                        <div class="text-step" id="step1">
+                            <div class="text-card">
+                                <p>Preparing for the video shooting, Xiao gradually introduced costumes to QQ. At first, he made a tiny hat out of light clay and placed it on QQ’s head while he was sitting. Since the clay hat was lightweight and didn’t put any pressure on him, he didn’t resist.</p>
+                            </div>
+                        </div>
+                        <div class="text-step" id="step2">
+                            <div class="text-card">
+                                <p>After he got used to it, Xiao switched to a paper hat, then later added a piece of cloth over his body, and finally, even attached a prosthetic limb.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scrolly-image-column">
+                        <div class="image-sticky-box">
+                            <img src="media/QQbefore.png" alt="QQ Cosplay Before" class="qq-img" id="img-before">
+                            <img src="media/QQafter.png" alt="QQ Cosplay After" class="qq-img" id="img-after" style="display: none;">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <p>“The whole process was step by step. It took QQ more than ten days to adapt. He was pretty calm, obedient, and well-behaved,” Xiao said. “Of my seven cats, only QQ cooperates now. Others still need more training.”</p>
+
+            <p>Xiao prioritizes QQ's well-being and comfort in video shoots. However, some creators push their pets to physical and emotional limits in the race for clicks.</p>
+
+            <p>One pet influencer, Pan Hong, was known for videos employing rough and violent dog training.</p>
+            
+            <p>In the lead-up to the Chinese New Year in 2025, Pan’s followers repeatedly urged him to bathe his dog, Aite, so that the dog could be clean for the new year. Pan agreed and promised to livestream the bath if his latest video reached 10 million likes.</p>
+
+            <p>On the afternoon of 19 January 2025, Pan took Aite to a pet grooming shop and broadcast the bath live. The livestreaming attracted more than 4.9 million viewers at its peak.</p>
+
+            <p>Instead of using a standard anti‑bite muzzle, Pan tightly bound Aite’s mouth with a plastic cable tie and wrapped it several times with black tape.</p>
+
+            <div class="multimedia-vertical">
+                <img src="media/Panhong.png" alt="Pan Hong incident">
+                <p class="caption">Pan bathed Aite during the livestreaming. Photo: Douyin</p>
+            </div>
+
+            <p>During the livestreaming, Aite was seen panting heavily and struggling. He repeatedly attempted to pull away and lift his head to breathe but was restrained by Pan and, at one point, slapped back into the bathtub.</p>
+
+            <p>Soon after, Aite displayed abnormal symptoms, including rolled‑back eyes and bleeding from the mouth. The dog then collapsed and became unresponsive. The livestreaming ended abruptly.</p>
+
+            <p>In a subsequent statement, Pan denied exploiting the incident for traffic or commercial purposes, saying the livestreaming included no gift‑soliciting, sales promotions, or livestream “PK” competitions. He said binding the dog’s mouth, rather than using a muzzle, was a safety measure because Aite had previously bitten and injured people.</p>
+
+            <p>Pan also claimed that the bleeding around the dog’s mouth was caused by self‑scratching, that the whitening of its eyes was a normal condition, and that Aite was already elderly and had fainted twice in the past. He attributed the dog’s death to cardiac problems triggered by agitation during the bath.</p>
+
+            <p>However, some viewers who reviewed archived clips of the livestreaming disputed Pan’s statement. They found that Pan promoted at least twice the pet shampoo he was selling and praised it by saying it could untangle matted fur and was an effective two‑in‑one shampoo and conditioner.</p>
+            
+            <p>After the incident, many criticized Pan for being unscrupulous in chasing online traffic. Some even called for Pan to be banned. Pan later deleted all content from his social media accounts.</p>
+
+            <p>While Pan’s case drew public outrage, a greater share of social media content that harms pets appears in a more subtle way.</p>
+
+            <p>Zhu Danhong, a 30-year-old accountant from Shanghai, is the owner of two dogs and an individual pet rescuer. She once saw an influencer encouraging her dog to sit upright for extended periods, hurting the dog's spine for the sake of a cute video. If the dog failed to remain seated, the owner would either manually reposition the dog or use treats to coax it back into place.</p>
+
+            <div class="multimedia">
+                <img src="media/sit.png" alt="Dog sitting">
+                <p class="caption">The owner describes her dog’s greatest skill as sitting. Photo: Xiaohongshu</p>
+            </div>
+
+            <p>She tried reporting such content to social media platforms, but they did not respond with real action.</p>
+
+            <p>“Reporting doesn’t really work,” she said. “Xiaohongshu just replied they’d strengthen their oversight, but nothing really happened. The influencer wasn’t banned. The platform just prevents me from seeing her posts anymore.” </p>
+
+            <p>Some viewers commented under the videos, warning about the risks of prolonged sitting, but the influencer ignored the feedback, and the account remained active.</p>
+            
+            <p>Xiang also frequently comes across such content while scrolling through social media. She has seen content where people place cat beds at great heights, causing the cats to fall off, just to show how heavy or funny they are. Other videos feature dogs unleashed outdoors, leading to scenes where the dogs collide with bicycles, jump from vehicles, or tumble into streams, all set to comic sound effects. Some owners boast that their dogs are smart enough to go without a leash, claiming they never run off.</p>
+            
+            <div class="multimedia-double">
+                <img src="media/fall1.jpg" alt="Fall 1">
+                <img src="media/fall2.jpg" alt="Fall 2">
+                <p class="caption">A video of a kitten falling from the top of the stairs received nearly 700,000 likes (left). Many viewers teased this video, and popular comments (right) included "Sorry, Auntie really didn't mean to laugh at you" and "Kitten says I'm not hurt. Don't tell my mom."</p>
+            </div>
+
+            <p>There are also pet mukbang videos where the owners make their pets consume excessive food or supplements, or unusual items like king crab, kangaroo meat, venison, or horse lips.</p>
+            
+            <div class="multimedia-double">
+                <img src="media/food1.png" alt="Food 1">
+                <img src="media/food2.png" alt="Food 2">
+                <p class="caption">A Golden Retriever (left) eats unhealthy food such as fried chicken, egg tarts, and pork belly in the video. A Border Collie (right) eats king crab in the video. Photo: Douyin</p>
+
+            </div>
+
+            <p>These videos rarely show obvious violence, but they normalize unsafe behaviors as harmless fun.</p>
+
+            <p>In Xiang’s observations, such videos often get hundreds of thousands, even millions of likes, and most viewers are unaware that these  behaviors are harmful to pets.</p>
+            
+            <p>The recommendation algorithm cares more about high like counts, completion rates, and comments than whether the content is truly good for pets. Platforms, especially Douyin, keep pushing the content. Over time, this can mislead viewers about what is acceptable treatment of pets.</p>
+            
+        </section>
+
+
+        <section id="personas" class="chapter">
+            <h2>Personas and Beauty Filters for Pets</h2>
+            
+            <p>Harm to pets is not always violent. Pet influencers are also given exaggerated personalities or appearances that don’t reflect who they really are.</p>
+
+            <p>On today’s social media platforms, pet accounts often contain anthropomorphic and narrative content.</p>
+
+            <p>One common style focuses on documenting pets' daily lives. Many creators use voiceovers to mimic what their pets might be thinking and frame scenes in which pets comfort, accompany, and care for themselves.</p>
+            
+            <p>Another common style has pets performing what humans do, such as cooking, driving, shopping, or fighting with their owners for a boyfriend. Some creators prepare speech buttons for their pets to make it seem as if the pets are communicating in human language or even acting as teachers to teach other animals. These storylines have inspired trending reactions online, with viewers saying, “I know this dog. He was my classmate in my language class," or “During the college entrance exam, he sat behind me.”</p>
+
+            <p>Zhu found that it is difficult for ordinary pet owners to create such pet videos. “Pets aren’t that obedient, and most of the time, their behavior is nothing special. When they do something funny, there’s always no time to record it, and you can’t ask them to do it again,” she said.</p>
+            
+            <p>“For example, once my dog picked up a yellow plate that happened to cover her eyes. She was so scared that she started running around in confusion. It was hilarious, but I couldn’t capture it in time,” she added.</p>
+
+            <p>“Much of the persona of pets, like funny or smart, in online videos comes from capturing very brief moments in pets’ real lives and then enhancing or exaggerating them through editing, or sometimes, there are no distinct personalities at all. Creators just use scripting and editing to build personas for their pets,” Zhang said.</p>
+
+            <p>For some viewers, though, the anthropomorphic genre is controversial. “When I see videos of pets mimicking humans, I tend to scroll away because I feel it goes against their nature. As a pet owner, I want to respect pets for who they really are,” Xiang said.</p>
+
+            <p>She did not think pets need to learn the skills shown in videos. “If a dog can go to the bathroom in the right place, I already consider that smart enough. My expectations for pets are low because, after all, they are animals. True intelligence in pets is actually quite rare,” she said.</p>
+
+            <p>“But if I say it goes against their wishes, many people might ask, 'How do you know they don't want to do this?’” she added.</p>
+
+            <p>Wang Zishu, a PhD student in journalism at Jinan University, has researched the social phenomena behind pet content.</p>
+
+            <p>“Pets have become forced performers. To get more clicks, owners create personas for their pets or exaggerate their behavior. This can suppress their nature, and they are compelled to act out a different version of their true selves according to their owners’ wishes. In some cases, it amounts to a form of harm to the pets,” Wang Zishu said.</p>
+
+            <p>“Pet-related content should serve the purposes of education and protection, helping the public understand pets as accurately as possible, rather than simply for entertainment or profit. Anthropomorphized content may hinder the public from developing a proper understanding of pets,” she added.</p>
+
+            <p>In addition to shaping their pets’ behavior and personalities to seem more human, pet influencers alter their pets’ appearance to fit human aesthetic standards.</p>
+
+            <p>Zhong Xin, 20, a sophomore from Sichuan, loves watching pet videos. Over half of the time he spends watching short videos every day is devoted to cute pets.</p>
+
+            <p>The first time he saw a photo of a Napoleon Munchkin cat named Xiaowulang on Xiaohongshu, his reaction was, "So cute, I love it." In the photo, Xiaowulang had big, gentle-looking eyes.</p>
+
+            <div class="multimedia-double">
+                <img src="media/5_1.png" alt="Exo 1">
+                <img src="media/5_2.png" alt="Exo 2">
+                <p class="caption">A photo of Xiaowulang (left) and a screenshot from a video of her (right). Photo: Xiaohongshu</p>
+            </div>
+            
+            <p>However, when Xiaowulang’s owner later posted a video of her, Zhong noticed the cat’s eyes didn’t look as big and round as they did in the pictures. He suspected the owner had edited the photo, possibly enlarging the cat’s eyes.</p>
+
+            <p>“The preference for neotenous traits may have already influenced the pet market,” he said. “People pursue big eyes and round faces and edit pets’ photos to make them look cuter, ignoring their natural beauty. This not only misleads the public about the true appearance of certain pets, but could also encourage unethical sellers to deceive buyers or even harm animals.”</p>
+
+            <p>“I understand the desire to edit photos to make pets look cuter, but influencers with large followings should be transparent about it. You shouldn't profit from traffic without taking responsibility,” he said.</p>
+            
+            <p>“Pets can come in all shapes and sizes. They don’t all have to have big eyes, round heads, and short legs,” he added.</p>
+
+ 
+            
+        </section>
+
+        <section id="preferences" class="chapter">
+            <h2>Reshaping Pet Ownership</h2>
+            
+            <p>To gain more traffic, pet content creators prefer to choose cute or uniquely looking pets and create endearing personas for them.</p>
+
+            <p>Instead of presenting the real lives of raising pets, they focus more on what kind of content is more likely to be liked, shared, or favored by advertisers.</p>
+            
+            <p>These aesthetic preferences and the pursuit of traffic have subtly influenced the public's decisions to choose, buy, adopt, and even abandon pets.</p>
+            
+            <p>Wang Xinran’s favorite pet on Xiaohongshu is a Siamese cat named Xiao Jiemo. She finds her gray, coal-like face very cute. Every time she sees videos of the cat, she feels an urge to get a cat of her own and often imagines what her life would be like with one.</p>
+            
+            <p>“I’m still a student and not financially independent yet. If I had a cat, I probably wouldn’t have much time to spend with it. If it ever got sick, I’m not sure I could handle it. That’s why I wouldn’t easily get a cat,” she said.</p>
+            
+            <p>However, not every viewer is cautious. For some viewers, adorable, healing, or funny pet content on social media has triggered their impulsive pet purchases and adoption. They tend to prefer breeds popularized by pet influencers, such as Beagles, Dachshunds, Ragdoll cats, etc.</p>
+        
+            <p>Liu Anning, 53, is a retiree who has been involved in rescuing stray animals since 2019. She said that breeds like Ragdoll cats, Maine Coons, and Border Collies were expensive in 2019.</p>
+            
+            <p>As the pet market developed and the internet fueled the popularity of pets, demand for pets increased. <a href="https://business.cctv.com/2026/01/05/ARTIdmv2AWmVeRVodaZYLOvQ260105.shtml" target="_blank">The 2026 China Pet Industry White Paper</a> shows that the total urban dog and cat population reached approximately 126 million in 2025, an increase of 2.21 million from 2024.</p>
+
+            <div class="chart-container">
+                <canvas id="petChart"></canvas>
+                <p class="data-source">Data source: China Pet Industry White Paper</p>
+            </div>
+
+            <p>Businesses realized that breeding popular breeds was highly profitable, so many began breeding them.</p>
+            
+            <p>“A lot of breeders operate in a totally unregulated way. The barrier to breeding is very low. Simply by getting a female and a male cat, you can start mating, producing kittens, and selling them. There’s no genetic screening or any other procedures,” Liu said. “The market is messy, and consumers can buy a cat or dog at a very low price.”</p>
+            
+            <p>According to <a href="https://www.xinhuanet.com/politics/2021-05/06/c_1127411025.htm" target="_blank">a report by Xinhua News Agency in May 2021</a>, animal rescue volunteers intercepted more than 160 puppies and kittens sealed in courier boxes at a delivery station in Chengdu, Sichuan. Four pets had already died, and most of the rest were in critical condition. These pets were sold as mystery boxes on e-commerce platforms. Buyers paid as little as a few yuan and had no idea about the pets' breeds or even whether the pets would arrive alive.</p>
+            
+            <p>Xiang's Pug was purchased for 1,500 yuan (HK$1,724.70) from a vendor near a subway station, but just a week after bringing it home, the puppy developed problems with its hind legs and started limping. A veterinary exam revealed that the puppy had hip dysplasia, a common hereditary condition.</p>
+            
+            <p>Xiang said that at regulated kennels, they typically breed only one dog breed, and puppies receive genetic testing. Pugs bred at regulated kennels start at 10,000 yuan (HK$11,498), but many people skip regulated kennels and instead buy from pet markets or pet shops.</p>
+            
+            <p>“The threshold for getting a dog or cat is just way too low. If people can easily get something, they don’t cherish it,” Xiang added.</p>
+
+            <p>After bringing a pet home, many people realize that raising a pet is not as simple or wonderful as depicted in online videos.</p>
+            
+            <p>“Online, you only see the adorable moments. Rarely do creators show the mess, like when your water bottle or flower vase gets knocked over by pets, the costs, the vet visits, and other real responsibilities. Not everyone can handle them. Moreover, once a pet's baby fur is gone, it may not look as cute as before,” Liu said.</p>
+            
+            <p>Xiang’s Shiba Inu was originally bought by her friend after seeing cute videos on Douyin. However, her friend soon realized that daily care, including frequent walks, training, and feeding, was too challenging and decided to give up the dog. Seeing that the dog wasn't being well cared for, Xiang chose to take him in and raise him herself.</p>
+
+            <p>In studies on female appearance anxiety, researchers have found that when social media constantly promotes “ideal body images” that are edited or filtered, many users subconsciously compare themselves to these images. Over time, they come to see these as the normal standard and become increasingly dissatisfied with their real bodies.</p> 
+
+            <p>Pet content follows the same logic. Algorithms repeatedly push images and videos of cats and dogs with round faces, big eyes, and short legs, and being well-behaved, clever, and funny. These carefully selected and edited appearances and personas gradually become the standard of what people see as attractive and lovable pets. As a result, real pets that are not as obedient or cute as pet influencers are more likely to be ignored, disliked, or even abandoned.
+            </p>
+
+            <p>“For those who still have a bit of conscience, if they don't want to keep their pets anymore, they'll sell them or try to find someone to adopt them. However, there are others who really have no conscience at all. They might just abandon their pets,” Liu said.</p>
+            
+            <p>Liu explained that in 2019, most stray cats were mixed-breed “village cats,” and pet cats rarely appeared on the streets. The two types are easy to distinguish. The former are wary and independent of humans, while pet cats are usually friendly and close to humans, approaching them for help.</p>
+            
+            <p>At that time, Liu and other pet rescuers, though it was tough, could still raise funds. When stray cats were found, they could be sent to places like shelters, where their lives were fairly decent.</p>
+            
+            <p>However, the past two years have been much worse. The number of abandoned pet cats has been rising, and now they make up at least half, if not more, of the stray cat population.</p>
+
+            <p>“2025 saw an all-time peak in abandonment. Almost every two weeks, I find another abandoned cat in my neighborhood," Liu said.</p>
+
+            <p>Iris He, 34, a calligraphy teacher who has been involved in stray animal rescue for four years, explained that pet cats have been selectively bred for docile temperaments. Having never experienced life on the streets, they have very poor survival skills in the wild. Some cats don't even know what is edible. When starving, they may even eat leaves or plastic.</p>
+
+            <p>“Friendliness puts them at risk, too. I’ve caught children hurting stray cats in my neighborhood three times. If I happen to encounter it, I can intervene, but there are so many incidents I haven’t seen. They’re quietly happening without anyone noticing,” she said. “Sometimes you realize a cat has been missing for a long time, and it’s very likely that it’s already gone.”</p>
+
+            <p>Liu funds everything herself to rescue stray animals, providing medical treatment, spraying or neutering, and taking care of them attentively. Pet cats will be put up for adoption, and those that are not close to humans will be released back into the wild.</p>
+
+            <div class="multimedia-double-stray">
+                <img src="media/stray1.jpg" alt="Stray 1">
+                <img src="media/stray2.jpg" alt="Stray 2">
+                <p class="caption">Liu rescued a silver British Shorthair cat whose ear had been bitten while it was a stray (left). One month later, the cat recovered (right). Photo by Liu Anning</p>
+            </div>
+
+            <p>Although social media platforms have brought more attention to stray animals, Liu found that finding responsible adopters remains hard.</p>
+
+            <p>“People who are truly involved in rescue aren’t that rational. We tend to rescue all the strays we meet on impulse, without thinking about the consequences. We rescue the strays first, and those that can’t be adopted can only be kept by ourselves,” Liu said.</p>
+
+            <p>Liu now lives with 12 rescued cats and dogs in her 120-square-meter home.</p>
+        </section>
+
+
+        <section id="pet-food-sales" class="chapter">
+            <h2>Online Pet Food Sales</h2>
+            
+            <p>Apart from reshaping the public's preferences for pets, pet influencers play an important role in pet owners’ purchasing decisions of pet food.</p>
+            
+            <p>According to <a href="https://www.researchgate.net/publication/387447471_The_Impact_of_Social_Media_on_Young_Chinese_Consumers'_Purchasing_Decisions_on_Pet_Products" target="_blank" rel="noopener noreferrer">a 2024 report</a> from Advances in Economics, Management and Political Sciences, 67.3% of surveyed pet owners have been attracted by influencer recommendations.</p>
+            
+            <p><a href="https://www.cbndata.com/report/3202/detail?isReading=report&page=3&readway=stand" target="_blank" rel="noopener noreferrer">Xiaohongshu 2024 Pet Industry Insight Report</a> also found that more than 52% of Xiaohongshu’s users had been influenced by pet influencers to purchase products or services. Among these users, 89% subsequently made purchases via e-commerce platforms and 41% bought products offline. The overall conversion rate within one month reached 91%.</p>
+
+            <div class="multimedia-request">
+                <img src="media/conversion2.png" alt="Data Infographic">
+            </div>
+            
+            <p>“If the pet influencer has a large following and genuinely operates their account, not just posting ads every time or running a pure sales channel, I tend to trust them,” Li Pingguo, owner of a cat named Chunchun, said. “I’ll be influenced by their ads and will sometimes make purchases because of them.”</p>
+
+            <p>Chen, the owner of Yatou, posts about 10 sponsored videos a month, mostly with pet food and supplement brands. Before agreeing to a partnership with pet food brands, she will carefully check the ingredients and research the brand’s reputation online. If the brand or product is not good enough, she will decline the collaboration.</p>
+
+            <div class="multimedia-vertical">
+                <img src="media/Yatousamples.png" alt="Data Infographic">
+                <p class="caption">Yatou sampled dog food for advertising. If Yatou refused to eat the promoted dog food, Chen would put the food next to her other dog to let Yatou know that If he did not eat it, the other dog would, and then Yatou would eat it. Photo: Xiaohongshu</p>
+            </div>
+            
+            <p>However, relying only on the ingredient list and brand reputation online isn't enough to judge the quality of pet food. Pet food recommended by pet influencers may have quality issues.</p>
+            
+            <p>BLACK CAT is a third-party consumer service platform where users can file complaints against businesses to protect their consumer rights. </p>
+
+            <p>On the platform, there have been over 30,000 complaints related to cat and dog food. One common issue is significant discrepancies between pet food ingredients and what is advertised by online or offline stores. There are also pet food quality problems, resulting in pets vomiting, having diarrhea, or even dying after consumption.</p>
+
+            <p><a href="https://www.nfnews.com/content/Kyllx7VRyD.html" target="_blank" rel="noopener noreferrer">A report by Southern Metropolis Daily</a> on March 14 also highlights ongoing concerns about pet food quality. </p>
+
+            <p>Reporters from the newspaper purchased the eight best-selling cat foods both online and offline and commissioned an independent testing organization to evaluate their nutritional content and safety.</p>
+
+            <p>Among the brands sold online, one was found to have a deficient crude protein level, which is a key nutritional metric for cat food. Long-term insufficient crude protein intake can affect cats’ growth, immunity, and muscle maintenance. While its online listing claimed a crude protein content of “≥28.1%,” testing found the actual amount was only 14.26% (dry matter basis), which is not only half the advertised value but also falls below China's national recommended standard for “Complete Pet Food—Cat Food” (GB/T 31217-2014) of 25% for adult cat food.</p>
+
+            <p>According to the <a href="https://business.cctv.com/2026/01/05/ARTIdmv2AWmVeRVodaZYLOvQ260105.shtml" target="_blank" rel="noopener noreferrer">2026 China Pet Industry White Paper</a>, the urban pet (dog and cat) market reached 312.6 billion yuan (HK$359.40 billion) in 2025, continuing its growth trend. Pet food remained the largest segment of the industry in 2025, accounting for 53.7% of the total pet market share.</p>
+
+            <p>However, market growth has not resulted in improved pet food standards. Zhang explained that many countries have established specific regulations for pet food, while in China, the standards for animals raised for slaughter and consumption and those for pets are the same. Whether the ingredients or bacterial counts in pet food actually ensure pets’ health depends on the conscience of the manufacturers.</p>
+
+            <p>“As soon as this kind of thing depends on conscience, there can be many problems. What brands write on the ingredient list isn’t always accurate, and it’s hard to verify,” he said.</p>
+
+            <p>Apart from mass-produced pet food, some pet influencers sell their homemade pet meals through videos or livestreams. In front of the camera, fresh ingredients like chicken breast, beef, salmon, lamb liver, and pumpkin are displayed. The influencers demonstrate the process of preparing fresh pet food, including cutting and portioning ingredients, washing, mincing and mixing, and packaging. They claim that “all ingredients are genuine, so you can trust us, and your pets will love it,” or “zero additives, zero preservatives, and zero flavor enhancers.” Their transparent selection of ingredients and visible preparation process have won the hearts of many pet owners.</p>
+
+            <div class="multimedia-vertical">
+                <img src="media/fresh_food.png" alt="Data Infographic">
+                <p class="caption">A Douyin influencer is making pet food in livestreaming. He claims the food is safe and healthy and has been tested by authoritative organizations. Photo: Douyin</p>
+            </div>
+
+            <p>However, Zhang said that unless the influencers have professional training and access to formula calculation tools, it’s unlikely that their homemade pet food is truly balanced. Formulating pet food is a specialized skill, and creating scientifically nutritious recipes is more complicated than it seems. If the nutritional balance cannot be ensured, pets may end up with uneven intake, which may threaten their health.</p>
+
+            <p>“Pets today suffer from many chronic illnesses, and honestly, I think it’s partly because some top influencers promote products that aren’t good enough and sometimes are even quite poor in quality. That’s a pain point I’ve noticed,” Zhang said.</p>
+        </section>
+
+        <section id="original-intention" class="chapter">
+            <h2>Returning to Original Intention of Cloud Pet Parenting</h2>
+            
+            <p>“Cloud pet parenting was originally a positive trend. Both creators who share their pets' daily lives and viewers who watch cute animal videos can find emotional fulfillment through virtual interaction. However, everything has two sides. We should be cautious about reducing pets to symbols or overly commercializing them,” Wang Zishu said.</p>
+            
+            <p>“We also need to consider how to build better platforms that help people truly understand pets and bring that affection and care into real life, rather than letting it stop at likes on a screen,” she added.</p>
+            
+            <p>Not all pet accounts are run for profit. Cissy Gao’s Xiaohongshu account is one of them.</p>
+
+            <p>Gao, an HR living in Shenzhen, initially used her Xiaohongshu account to document the rehabilitation and daily life of her beloved rooster named Qianqian, who was injured by a dog attack.</p>
+            
+            <p>Gao thought Qianqian wouldn’t survive. “But what kept me going was the help of strangers online who offered solutions and taught me how to feed and care for Qianqian. They checked in every day. Perhaps their love created a miracle, and Qianqian survived,” Gao said.</p>
+
+            <p>Now, Gao posts daily photos and has livestreaming on Xiaohongshu at 12:30 p.m. every day, updating fans about Qianqian and sharing what it’s like to keep a chicken at home, as well as facts about its habits and behavior.</p>
+
+            <p>“Some fans have followed me for a long time, and we’ve become friends. They always ask, ‘Is Qianqian behaving well? Is he doing well?’” she said.</p>
+            
+            <div class="multimedia-vertical">
+                <img src="media/qianqian1.png" alt="Qianqian 1">
+                <p class="caption">Gao and Qianqian are having livestreaming on Xiaohongshu. Photo: Xiaohongshu</p>
+            </div>
+
+            <p>If she cannot do the daily livestreaming, she will ask her fans to leave in advance. She has gained the love of many followers, even including international fans from the United States and Brazil.</p>
+
+            <div class="multimedia-vertical">
+                <img src="media/qianqian2.png" alt="Qianqian 2">
+                <p class="caption">A fan of Qianqian sent Gao a hand-drawn calendar featuring Qianqian as a gift to express his love for Qianqian. Photo by Cissy Gao</p>
+            </div>
+
+            <p>“My goal is to offer a healing space for anyone who needs it and let people know that both Qianqian and I are still here,” Gao said. “Every life deserves love and care. As long as you are willing to give, your love will not be in vain. On this platform, we gather because we value love and kindness. This space is pure, unlike the outside world. Here, we return to the most fundamental, most essential things.”</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; He Jinyi</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="video-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center;">
+    <span id="close-overlay" style="position:absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer;">&times;</span>
+    <video id="overlay-video" controls style="max-width:90%; max-height:90%;"></video>
+    </div>
+
+
+</body>
+</html>
